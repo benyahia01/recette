@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "web-project-60ecf": {
+      "hosting": {
+        "recette": [
+          "web-project-60ecf"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "web-project-60ecf"
+  }
+}

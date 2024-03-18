@@ -1,0 +1,7 @@
+<div class="container">
+    <h1>Tableau de bord</h1>
+    <p><strong>Bonjour, votre email est :</strong> {{ authService.userEmail$ | async }}</p>
+  </div>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button (click)="logout()" class="btn btn-primary me-md-2">Déconnexion</button>
+  </div>

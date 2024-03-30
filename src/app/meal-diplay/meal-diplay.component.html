@@ -1,0 +1,52 @@
+<div class="background-image">
+  <!-- Formulaire de recherche -->
+  <div class="search-form ml-3">
+    <form (submit)="searchMeal(mealName.value)">
+      <input type="text" #mealName placeholder="Entrez le nom d'un repas" required>
+      <button type="submit" class="btn btn-primary">Rechercher</button>
+    </form>
+  </div>
+
+
+
+
+
+  <!-- Affichage du repas -->
+
+  <div *ngIf="meal; else loading" class="container">
+    <div class="flex-row">
+      <div class="card " style="width: 18rem;">
+        <h1>{{ meal.strMeal}}</h1>
+        <img [src]="meal.strMealThumb" [alt]="meal.strMeal" class="card-img-top ">
+        
+      </div>
+    </div>
+    <div>
+      <div>
+        <h2>Ingrédients</h2>
+        <ul>
+          <li *ngFor="let ingredient of getIngredients(meal)">{{ ingredient }}</li>
+        </ul>
+
+        <p *ngIf="meal?.strYoutube"><strong>Vidéo:</strong> <a [href]="meal.strYoutube" target="_blank">Voir la recette
+            sur YouTube</a></p>
+      </div>
+    </div>
+    
+    <div class="meal-details flex-row">
+
+      <p><strong>Catégorie:</strong> {{ meal.strCategory }}</p>
+      <p><strong>Cuisine:</strong> {{ meal.strArea }}</p>
+      <p><strong>Tags:</strong> {{ meal.strTags }}</p>
+
+    </div>
+
+  </div>
+
+  <!-- Template de chargement -->
+  <ng-template #loading>
+    <div class="loading">
+      <p>Chargement du repas...</p>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,142 @@
+/* Style général de la page */
+
+.background-image {
+  background-image: url('../../assets/img/back.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 130vh; /* Ajustez la hauteur selon vos besoins */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond semi-transparente pour le contenu */
+  padding: 20px;
+  border-radius: 10px; /* Pour arrondir les coins */
+  margin-top: 20px; /* Espace entre le formulaire de recherche et le contenu */
+}
+
+/* Ajoutez d'autres styles CSS selon vos besoins */
+
+
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Style du formulaire de recherche */
+.search-form {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #007bff;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Style de l'affichage du repas */
+.containe {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card {
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Changement de la direction en colonne */
+  align-items: center; /* Centrage horizontal */
+}
+
+.card h1 {
+  font-size: 1.8rem; /* Ajoutez cette ligne pour ajuster la taille du titre */
+}
+
+.card-img-top {
+  max-width: calc(100% - 10px);
+   height: auto;
+  max-height: 250px; /* Ajoutez cette ligne pour limiter la hauteur de l'image */
+  margin:5px auto;
+  border-radius: 5px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Ajout de marges pour aérer le contenu */
+.meal-details > *:not(:last-child) {
+  margin-bottom: 15px;
+
+  
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}

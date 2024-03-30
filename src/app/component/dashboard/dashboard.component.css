@@ -1,0 +1,21 @@
+/* Masquer le titre initial */
+#animated-title {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* Animation d'écriture */
+  #animated-title::after {
+    content: attr(data-title);
+    animation: write 5s steps(40, end) infinite;
+  }
+  
+  @keyframes write {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  

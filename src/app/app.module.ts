@@ -11,6 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { MealDisplayComponent } from './meal-diplay/meal-diplay.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    PasswordResetComponent
+    PasswordResetComponent,
+    MealDisplayComponent,
+    HomeComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig), // Initialize Firebase
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

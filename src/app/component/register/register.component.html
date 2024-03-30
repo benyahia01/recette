@@ -1,36 +1,30 @@
-<div class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title text-center">Inscription</h3>
-            <form (submit)="register(email.value, password.value,confirmPassword.value)">
-              <div class="mb-3">
-                <label for="email" class="form-label">Adresse Email</label>
-                <input type="email" #email class="form-control" id="email" placeholder="nom@example.com" required>
-              </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">Mot de Passe</label>
-                <input type="password" #password class="form-control" id="password" placeholder="Mot de passe" name="password" required>
-              </div>
-              <div class="mb-3">
-                <label for="confirmPassword" class="form-label">Confirmez le Mot de Passe</label>
-                <input type="password" #confirmPassword class="form-control" id="confirmPassword" placeholder="Confirmez le mot de passe" name="confirmPassword" required>
-              </div>
-              <!-- Juste après les champs de mot de passe -->
-                <div *ngIf="passwordMismatch" class="alert alert-danger" role="alert">
-                     Les mots de passe ne correspondent pas.
-                </div>
-              <button type="submit" class="btn btn-primary w-100">S'inscrire</button>
-            </form>
-            <div class="mt-4 text-center">
-             <strong> se connecter :  </strong><a routerLink="/login">se conncecter</a>
-              </div>
+<div class="bg-img">
+  <div class="content">
+      <header>Inscription</header>
+      <form (submit)="register(email.value, password.value, confirmPassword.value)">
+          <div class="field">
+              <span class="fa fa-user"></span>
+              <input type="email" #email class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="nom@example.com" name="email">
+              <div id="emailHelp" class="form-text">.</div>
           </div>
-        </div>
-      </div>
-    </div>
+          <div class="field space">
+              <span class="fa fa-lock"></span>
+              <input type="password" #password class="form-control" id="passwordInput" placeholder="Mot de passe" name="password">
+          </div>
+          <div class="field space">
+              <span class="fa fa-lock"></span>
+              <input type="password" #confirmPassword class="form-control" id="confirmPasswordInput" placeholder="Confirmez le mot de passe" name="confirmPassword">
+          </div><br>
+          <!-- Juste après les champs de mot de passe -->
+          <div *ngIf="passwordMismatch" class="alert alert-danger" role="alert">
+              Les mots de passe ne correspondent pas.
+          </div>
+          <div class="field">
+              <input type="submit" value="S'inscrire">
+          </div>
+          <div class="signup">Déjà inscrit?
+              <a routerLink="/login">Se connecter</a>
+          </div>
+      </form>
+  </div>
 </div>
-
-
-

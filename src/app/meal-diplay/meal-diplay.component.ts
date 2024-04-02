@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Themealdb } from '../themealdb'; // Assurez-vous que le chemin est correct
 import { Router } from '@angular/router';
+import { AuthService } from '../../app/shared/auth.service';
 
 @Component({
   selector: 'app-meal-diplay',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class MealDisplayComponent implements OnInit {
   meal: Themealdb | null = null;
 
-  constructor(private apiService: ApiService, private router: Router) { }
+  constructor(public authService: AuthService, private apiService: ApiService, private router: Router) { }
 
   ngOnInit() {
     this.getRandomMeal();
@@ -71,5 +72,11 @@ export class MealDisplayComponent implements OnInit {
       this.meal = null; // Assurez-vous également de gérer les erreurs
     });
   }
-  
+  logout() {
+    this.authService.logout().then(() => {
+      this.router.navigate(['/login']); // Redirige vers le formulaire de connexion
+    }).catch((error: any) => {
+      console.error('Erreur lors de la déconnexion', error);
+    });
+  }
 }

@@ -6,6 +6,7 @@ import { RegisterComponent } from './component/register/register.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { MealDisplayComponent } from './meal-diplay/meal-diplay.component';
 import { HomeComponent } from './component/home/home.component';
+import { GallerieComponent } from './component/gallerie/gallerie.component';
 
 const routes: Routes = [
 {path: '' , redirectTo:'home', pathMatch:'full'},
@@ -14,7 +15,8 @@ const routes: Routes = [
 {path: 'login' , component: LoginComponent},
 {path: 'dashboard' , component: DashboardComponent},
 { path: 'password-reset', component: PasswordResetComponent},
-{ path: 'meal',component: MealDisplayComponent}
+{ path: 'meal',component: MealDisplayComponent},
+{ path: 'galerie',component: GallerieComponent}
 
 
 

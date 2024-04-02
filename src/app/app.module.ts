@@ -14,6 +14,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { MealDisplayComponent } from './meal-diplay/meal-diplay.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './component/home/home.component';
+import { GallerieComponent } from './component/gallerie/gallerie.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HomeComponent } from './component/home/home.component';
     PasswordResetComponent,
     MealDisplayComponent,
     HomeComponent,
+    GallerieComponent,
     
   ],
   imports: [
